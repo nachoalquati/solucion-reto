@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Output of 'npm pack'
+*.tgz
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.idea/
+.vscode/
