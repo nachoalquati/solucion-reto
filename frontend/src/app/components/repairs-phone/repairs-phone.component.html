@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Reparaciones <span class="badge bg-secondary">{{owner}}</span></h2>
+    <div class="row">
+
+        <app-repair [repair]="repair" *ngFor="let repair of repairs" ></app-repair>
+        
+    </div>
+</div>

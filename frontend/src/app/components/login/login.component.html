@@ -1,0 +1,46 @@
+<div class="container-lg my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-lg">
+          <div class="card-header bg-primary text-white text-center py-4">
+            <h3 class="mb-0">Reparaciones App</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="email" class="font-weight-bold">Correo</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"  placeholder="Enter email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
+                <small id="emailHelp" class="form-text text-muted">No compartiremos tu informacion.</small>
+              </div>
+              <div class="form-group">
+                <label for="password" class="font-weight-bold" >Contrasena</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                <div *ngIf="atempt>=1">
+                  <hr>
+                  <div class="alert alert-danger" role="alert">
+                    {{alert}}
+                    </div>
+                </div>
+                <hr>
+              </div>
+
+            </form>
+          </div>
+          <button (click)="onSubmit()" class="btn btn-primary btn-block">Ingresar</button>
+          <div class="card-footer bg-light">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-0">© 2023 Reparaciones App. Todos los derechos reservados.</p>
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="#">Politicas de privacidad</a>
+                <span class="mx-2">|</span>
+                <a href="#">Terminos de servicio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

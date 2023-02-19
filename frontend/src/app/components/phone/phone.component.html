@@ -1,0 +1,13 @@
+<div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ phone.model }}</h5>
+        <p class="card-text">{{phone.observation}}</p>
+        <p class="card-text">{{phone.stringState}}</p>
+        <p class="card-text">{{phone.admissionDate}}</p>
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-primary btn-block"  routerLink="/repairs/{{phone.id}}">Ver reparaciones</a>
+      </div>
+    </div>
+  </div>

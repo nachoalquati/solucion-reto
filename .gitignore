@@ -30,12 +30,6 @@ node_modules/
 /tmp
 
 # Generated files
-*.js
-*.js.map
-*.css
-*.css.map
-*.html
-*.d.ts
 
 # Logs and debugging
 logs

@@ -1,0 +1,12 @@
+<div class="col-md-6 mb-4">
+  <div class="card h-100">
+    <div class="card-body">
+      <h5 class="card-title">{{ client.name }}</h5>
+      <p class="card-text">{{client.email}}</p>
+      <p class="card-text">+{{client.phone}}</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-primary btn-block"  routerLink="/phones/{{ client.id }}">Ver teléfono</a>
+    </div>
+  </div>
+</div>
