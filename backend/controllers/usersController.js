@@ -6,7 +6,7 @@ const { sequelize } = require('../database/models');
 const User = db.User
 const usersController = {
     list: (req, res) => {
-
+// This returns a list of all the users existing in the DB.
         sequelize.query(`
         select name, email from users
         `)
@@ -21,6 +21,10 @@ const usersController = {
 
     },
     createNewUser: (req, res) => {
+
+    //This controller recibes an email as string a name as a string and,
+    // a pass as a string and hashes the password to finally insert the data,
+    //into the DB.
         let newUser = req.body
         let encryptedPass = bcrypt.hashSync(req.body.password, 10);
 
@@ -45,6 +49,9 @@ const usersController = {
 
     },
     login: (req, res) => {
+        //Check that the new hashed password matches the existing one
+        //and if it matches it creats a session and passes a cookie to
+        // the client.
         let userToLogin = req.body.email
 
         console.log(req.body.email);
@@ -103,6 +110,7 @@ const usersController = {
 
     },
     logout: (req, res) => {
+        //Destroys the existing session.
         req.session.destroy(function (err) {
             if (err) {
                 return res.status(400).json({

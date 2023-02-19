@@ -4,7 +4,7 @@ const { sequelize } = require('../database/models');
 
 const clientController = {
     list: (req, res) => {
-
+// This returns a list of all the clients existing in the DB.
         sequelize.query(`
         select * from clients
         order by id desc
@@ -21,7 +21,8 @@ const clientController = {
 
     },
     createNewClient: (req, res) => {
-
+// This endpoint is used to create a new client by passing an email as a string,
+// a name as a string and a phone as a number with a minimun of 6 digits.
     if(req.body.name.length<1){
             return res.status(400).json({
                 error: 'Debe ingresar un nombre.'

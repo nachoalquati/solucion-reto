@@ -3,7 +3,7 @@ const { sequelize } = require('../database/models');
 
 const businessController = {
     phonesByClientId: (req, res) => {
-
+// Brings all the phones that a client has by passing the id of the client.
         sequelize.query(`
         SELECT id, model, observation, clientId, status, DATE_FORMAT(admissionDate, '%d/%m/%Y %H:%i:%s') as admissionDate ,  
         CASE
@@ -25,7 +25,7 @@ const businessController = {
 
     },
     repairsByPhone: (req, res) => {
-
+//Returns a list of repairs of a single phone, you should pass the phone id.
         sequelize.query(`
         select clients.name ,  phones.model ,amount, repairs.observation , DATE_FORMAT(date, '%d/%m/%Y %H:%i:%s') as date from repairs
         inner join phones on phoneId = phones.id
@@ -44,7 +44,7 @@ const businessController = {
 
     },
     repairsList: (req, res) => {
-
+// Bring all the repairs that are registred in the DB.
         sequelize.query(`
         select clients.name ,  phones.model ,amount, repairs.observation , DATE_FORMAT(date, '%d/%m/%Y %H:%i:%s') as date from repairs
         inner join phones on phoneId = phones.id
@@ -60,7 +60,7 @@ const businessController = {
 
     },
     newPhone: (req, res) => {
-
+// Creats a new phone, you should pass a model as a string, an observation as a string and a clientId as a number.
         if(req.body.model.length<1){
             return res.status(400).json({
                 error: 'Debe ingresar un modelo.'
@@ -96,7 +96,8 @@ const businessController = {
     },
     assingRepair: (req, res) => {
 
-
+// This endpoint get a amount as a number, an observation as a string and a phoneId as a number,
+// it will asaing a repair to a phone.
 
         if(req.body.amount.length<1){
             return res.status(400).json({
