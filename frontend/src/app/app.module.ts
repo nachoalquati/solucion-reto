@@ -11,12 +11,18 @@ import { ClientComponent } from './components/client/client.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule,Routes} from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { PhonesComponent } from './phones/phones.component';
+import { PhoneComponent } from './components/phone/phone.component';
+import { RepairsPhoneComponent } from './components/repairs-phone/repairs-phone.component';
+import { RepairComponent } from './components/repair/repair.component';
 
 
 const appRoutes:Routes=[
  { path:'', component:HomeComponentComponent},
  {path:'clients', component:ClientListComponent},
- {path:'login', component:LoginComponent}
+ {path:'login', component:LoginComponent},
+ { path:'phones/:id', component: PhonesComponent },
+ { path:'repairs/:id', component: RepairsPhoneComponent }
 ]
 
 @NgModule({
@@ -26,7 +32,11 @@ const appRoutes:Routes=[
     LoginComponent,
     ClientListComponent,
     ClientComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    PhonesComponent,
+    PhoneComponent,
+    RepairsPhoneComponent,
+    RepairComponent
   ],
   imports: [
     BrowserModule,

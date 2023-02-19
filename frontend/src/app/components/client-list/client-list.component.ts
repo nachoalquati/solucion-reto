@@ -17,10 +17,7 @@ clients: any
 constructor(private clientsService: ClientsService) { }
 
 
-
-
 ngOnInit(){
-  console.log('asd')
   this.clientsService.getClients().subscribe(data => {
     this.clients = data.data;
     console.log(this.clients);
