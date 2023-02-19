@@ -16,6 +16,7 @@ import { PhoneComponent } from './components/phone/phone.component';
 import { RepairsPhoneComponent } from './components/repairs-phone/repairs-phone.component';
 import { RepairComponent } from './components/repair/repair.component';
 import { RepairsListComponent } from './components/repairs-list/repairs-list.component';
+import { NewPhoneComponent } from './components/new-phone/new-phone.component';
 
 
 
@@ -40,7 +41,8 @@ const appRoutes:Routes=[
     PhoneComponent,
     RepairsPhoneComponent,
     RepairComponent,
-    RepairsListComponent
+    RepairsListComponent,
+    NewPhoneComponent
   ],
   imports: [
     BrowserModule,
