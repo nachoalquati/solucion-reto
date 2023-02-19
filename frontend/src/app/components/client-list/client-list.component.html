@@ -9,15 +9,18 @@
 
 
 <div class="container">
+    <div class="row justify-content-center mb-3">
+        <button class="btn btn-primary btn-block col-md-6" routerLink="/register-client"><b>Crear Cliente</b></button>
+    </div>
     <div class="container-lg my-3">
-        <div class="row justify-content-center">
-            <button class="btn btn-primary btn-block" routerLink="/register-phone"><b>Crear cliente</b></button>
-        </div>
       </div>
-    <div class="row">
+    <div class="row" *ngIf="clients.length>0">
         <app-client [client]="client" *ngFor="let client of clients">
             
         </app-client>
-        
     </div>
+    <div class="alert alert-danger" role="alert"  *ngIf="clients.length<1" >
+        No hay clientes registrados!
+    </div>
+
 </div>

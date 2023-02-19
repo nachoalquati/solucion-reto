@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="row justify-content-center mb-3">
+        <button class="btn btn-primary btn-block col-md-6" routerLink="/register-phone"><b>Crear Telefono</b></button>
+    </div>
     <div class="row">
 
         <app-phone [phone]="phone" *ngFor="let phone of phones" ></app-phone>

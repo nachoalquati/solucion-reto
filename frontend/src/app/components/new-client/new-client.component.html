@@ -3,25 +3,22 @@
       <div class="col-md-8 col-lg-6">
         <div class="card border-0 shadow-lg">
           <div class="card-header bg-light text-dark text-center py-4">
-            <h3 class="mb-0">Crear nuevo Telefono</h3>
+            <h3 class="mb-0">Crear nuevo Cliente</h3>
           </div>
           <div class="card-body">
             <form>
               <div class="form-group mb-3">
-                <label for="text" class="font-weight-bold">Modelo</label>
-                <input type="text" class="form-control" id="text" name="model" [(ngModel)]="model" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar modelo de celular." >
+                <label for="text" class="font-weight-bold">Nombre</label>
+                <input type="text" class="form-control" id="text" name="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar nombre." >
               </div>
               <div class="form-group mb-3">
-                <label for="exampleFormControlTextarea1" class="font-weight-bold" >Observacion</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observation" [(ngModel)]="observation" [ngModelOptions]="{standalone: true}"></textarea>
-                
+                <label for="exampleFormControlTextarea1" class="font-weight-bold" >Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar correo." >
               </div>
-              <label for="exampleFormControlTextarea1" class="font-weight-bold" >Cliente</label>
-              <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="clientId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione telefono">
-                <option disabled>Seleccione cliente</option>
-                <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
-      
-              </select>
+              <div class="form-group mb-3">
+                <label for="text" class="font-weight-bold">Teléfono </label>
+                <input type="text" class="form-control" id="text" name="phone" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar telefono de contacto." >
+              </div>
 
             </form>
             <div *ngIf="errorAlert.length>=1">

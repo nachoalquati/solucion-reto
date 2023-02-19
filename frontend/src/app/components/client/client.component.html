@@ -1,12 +1,14 @@
-<div class="col-md-6 mb-4">
-  <div class="card h-100">
-    <div class="card-body">
-      <h5 class="card-title">{{ client.name }}</h5>
-      <p class="card-text">{{client.email}}</p>
-      <p class="card-text">+{{client.phone}}</p>
-    </div>
-    <div class="card-footer">
-      <a class="btn btn-primary btn-block"  routerLink="/phones/{{ client.id }}">Ver teléfono</a>
-    </div>
+<div class="card text-center mb-3">
+  <div class="card-header fs-3">
+    {{ client.name }}
   </div>
+  <div class="card-body">
+    <h5 class="card-title">{{client.email}}</h5>
+    <p class="card-text">+{{client.phone}}</p>
+    <a class="btn btn-primary btn-block"  routerLink="/phones/{{ client.id }}">Ver teléfonos</a>
+  </div>
+  <div class="card-header">
+
+  </div>
+
 </div>

@@ -60,7 +60,20 @@ const businessController = {
 
     },
     newPhone: (req, res) => {
-       
+
+        if(req.body.model.length<1){
+            return res.status(400).json({
+                error: 'Debe ingresar un modelo.'
+            })
+        }
+        if(req.body.observation.length<1){
+            return res.status(400).json({
+                error: 'Debe ingresar una observacion.'
+            })
+        }
+
+        console.log(req.body.clientId);
+       console.log('asdasdasdasdasd');
         sequelize.query(`
         INSERT INTO phones (model, observation, clientId, admissionDate, status)
         VALUES ('${req.body.model}', '${req.body.observation}', '${req.body.clientId}', now(), 1)
