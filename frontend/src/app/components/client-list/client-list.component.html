@@ -1,18 +1,11 @@
-<!-- <div class="card-group">
-<app-client [client]="client" *ngFor="let client of clients"></app-client>
-
-</div> -->
-
-<!-- <div class="list-group ; max-width: 70%">
-    
-</div> -->
-
 
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
     <span class="badge bg-secondary fs-4 mb-3 col-lg-12">Listado de clientes</span>
     <div class="container-lg my-3">
         <div class="row justify-content-center mb-3">
-            <button class="btn btn-primary btn-block col-md-6" routerLink="/register-client"><b>Crear Cliente</b></button>
+            <button class="btn btn-primary btn-block" routerLink="/register-client"><b>Crear Cliente</b></button>
         </div>
       </div>
     <div class="row" *ngIf="clients.length>0">
@@ -23,5 +16,6 @@
     <div class="alert alert-danger" role="alert"  *ngIf="clients.length<1" >
         No hay clientes registrados!
     </div>
-
+    </div>
+    </div>
 </div>

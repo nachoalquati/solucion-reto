@@ -1,16 +1,20 @@
 <div class="container">
-    <span class="badge bg-secondary fs-4 mb-3 col-lg-12">Listado de teléfonos</span>
-    <div class="container-lg my-3">
-        <div class="row justify-content-center mb-3">
-            <button class="btn btn-primary btn-block col-md-6" routerLink="/register-phone"><b>Crear teléfono</b></button>
-        </div>
-      </div>
-    <div class="row" *ngIf="phones.length>0">
-        <app-phone [phone]="phone" *ngFor="let phone of phones" ></app-phone>
-            
-    </div>
-    <div class="alert alert-danger" role="alert"  *ngIf="phones.length<1" >
-        No hay clientes registrados!
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <span class="badge bg-secondary fs-4 mb-3 col-lg-12">Listado de teléfonos</span>
+            <div class="container-lg my-3">
+                <div class="row justify-content-center mb-3">
+                    <button class="btn btn-primary btn-block" routerLink="/register-phone"><b>Crear
+                            teléfono</b></button>
+                </div>
+            </div>
+            <div class="row" *ngIf="phones.length>0">
+                <app-phone [phone]="phone" *ngFor="let phone of phones"></app-phone>
 
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="phones.length<1">
+                No hay clientes registrados!
+            </div>
+        </div>
+    </div>
 </div>

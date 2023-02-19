@@ -1,4 +1,6 @@
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
     <span class="badge bg-secondary fs-4 mb-3 col-lg-12">Listado de reparaciones</span>
     <div class="container-lg my-3">
         <div class="row justify-content-center">
@@ -13,6 +15,8 @@
     <div  *ngIf="repairs.length<1">
         <div class="alert alert-danger" role="alert"  >
             No hay reparaciones registradas!
+        </div>
+    </div>
         </div>
     </div>
 
