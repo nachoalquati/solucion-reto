@@ -26,7 +26,8 @@ const appRoutes:Routes=[
  {path:'login', component:LoginComponent},
  { path:'phones/:id', component: PhonesComponent },
  { path:'repairs/:id', component: RepairsPhoneComponent },
- { path:'repairs-list', component: RepairsListComponent }
+ { path:'repairs-list', component: RepairsListComponent },
+ { path:'register-phone', component: NewPhoneComponent }
 ]
 
 @NgModule({
