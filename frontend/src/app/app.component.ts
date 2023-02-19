@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { LogoutService } from './logout.service';
+import { HttpClient } from '@angular/common/http'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -8,7 +12,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Reparaciones TEL';
 
-  onSubmit(){
-    this.title = "Iniciando sesion"
+  logouts:any
+ 
+
+  http = inject(HttpClient);
+
+  constructor(private router: Router, private logoutserv:LogoutService) { }
+
+  logout(){
+      this.logoutserv.logOut().subscribe(data => {
+        if(data.status=201){
+          this.router.navigate(['/login']);
+        }
+        
+      });
+  
   }
 }

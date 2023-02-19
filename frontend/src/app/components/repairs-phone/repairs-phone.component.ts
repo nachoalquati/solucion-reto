@@ -26,7 +26,7 @@ ngOnInit(){
   this.repairsPhone.getRepairs(this.id).subscribe(data => {
     this.repairs = data.data;
     
-    this.owner = data.data[0].model + " - " + data.data[0].name
+    this.owner = data.data[0].model + " " + data.data[0].name
   });
 }
 

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Client } from '../../models/client.model'
 import { ClientsService } from 'src/app/clients.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-list',
@@ -14,14 +15,19 @@ http = inject(HttpClient);
 
 clients: any
 
-constructor(private clientsService: ClientsService) { }
+constructor(private router:Router, private clientsService: ClientsService) { }
 
 
 ngOnInit(){
   this.clientsService.getClients().subscribe(data => {
     this.clients = data.data;
     console.log(this.clients);
-  });
+  },
+  error=>{
+    console.log(error);
+    this.router.navigate(['/login']);
+  }
+  );
 }
   
 }

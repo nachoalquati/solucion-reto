@@ -15,6 +15,8 @@ import { PhonesComponent } from './phones/phones.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { RepairsPhoneComponent } from './components/repairs-phone/repairs-phone.component';
 import { RepairComponent } from './components/repair/repair.component';
+import { RepairsListComponent } from './components/repairs-list/repairs-list.component';
+
 
 
 const appRoutes:Routes=[
@@ -22,7 +24,8 @@ const appRoutes:Routes=[
  {path:'clients', component:ClientListComponent},
  {path:'login', component:LoginComponent},
  { path:'phones/:id', component: PhonesComponent },
- { path:'repairs/:id', component: RepairsPhoneComponent }
+ { path:'repairs/:id', component: RepairsPhoneComponent },
+ { path:'repairs-list', component: RepairsListComponent }
 ]
 
 @NgModule({
@@ -36,7 +39,8 @@ const appRoutes:Routes=[
     PhonesComponent,
     PhoneComponent,
     RepairsPhoneComponent,
-    RepairComponent
+    RepairComponent,
+    RepairsListComponent
   ],
   imports: [
     BrowserModule,
