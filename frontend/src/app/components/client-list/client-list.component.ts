@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Client } from '../../models/client.model'
+import { ClientsService } from 'src/app/clients.service';
 
 @Component({
   selector: 'app-client-list',
@@ -11,14 +12,19 @@ export class ClientListComponent {
 
 http = inject(HttpClient);
 
-clients: Client[] = []
+clients: any
+
+constructor(private clientsService: ClientsService) { }
+
+
+
 
 ngOnInit(){
-  this.http.get<Client[]>('/clients/list')
-  .subscribe((data) =>{
-    console.log(data);
-    this.clients = data
-  })
+  console.log('asd')
+  this.clientsService.getClients().subscribe(data => {
+    this.clients = data.data;
+    console.log(this.clients);
+  });
 }
   
 }
