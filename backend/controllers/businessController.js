@@ -95,6 +95,20 @@ const businessController = {
 
     },
     assingRepair: (req, res) => {
+
+
+
+        if(req.body.amount.length<1){
+            return res.status(400).json({
+                error: 'Debe ingresar un monto.'
+            })
+           }
+        if(req.body.observation.length<1){
+            return res.status(400).json({
+                error: 'Debe ingresar una observacion.'
+            })
+        }
+
        
         sequelize.query(`
         INSERT INTO repairs (amount, observation, date, phoneId)

@@ -7,4 +7,9 @@
         <app-phone [phone]="phone" *ngFor="let phone of phones" ></app-phone>
         
     </div>
+
+    <div class="alert alert-danger" role="alert"  *ngIf="phones.length<1" >
+        No hay teléfonos registrados!
+    </div>
+
 </div>

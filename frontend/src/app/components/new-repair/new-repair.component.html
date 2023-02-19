@@ -1,1 +1,57 @@
-<p>new-repair works!</p>
+<div class="container-lg my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-lg">
+          <div class="card-header bg-light text-dark text-center py-4">
+            <h3 class="mb-0">Crear nuevo Telefono</h3>
+          </div>
+          <div class="card-body">
+            <form>
+            <label for="exampleFormControlTextarea1" class="font-weight-bold" >Cliente</label>
+            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="selectedClientId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione telefono" (change)="loadPhonesByClient()">
+                <option disabled>Seleccione cliente</option>
+                <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
+            </select>
+            <label for="exampleFormControlTextarea1" class="font-weight-bold" >Telefono</label>
+            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="phoneId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione telefono">
+                <option disabled>Seleccione telefono</option>
+                <option *ngFor="let phone of phones" [value]="phone.id">{{ phone.model }}</option>
+            </select>
+
+                  
+              <div class="form-group mb-3">
+                <label for="text" class="font-weight-bold">Costo de reparación</label>
+                <input type="number" class="form-control" id="text" name="model" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar costo por reparación." >
+              </div>
+              <div class="form-group mb-3">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold" >Observacion</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observation" [(ngModel)]="observation" [ngModelOptions]="{standalone: true}"></textarea>
+                
+              </div>
+             
+
+
+            </form>
+            <div *ngIf="errorAlert.length>=1">
+              <hr>
+              <div class="alert alert-danger" role="alert">
+                {{errorAlert}}
+                </div>
+            </div>
+            <div *ngIf="alert.length>=1">
+              <hr>
+              <div class="alert alert-success" role="alert">
+                {{alert}}
+                </div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" (click)="submitForm()">Crear</button>
+          <div class="card-footer bg-light">
+            <div class="row">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

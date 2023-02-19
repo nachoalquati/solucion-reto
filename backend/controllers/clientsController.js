@@ -22,7 +22,7 @@ const clientController = {
     },
     createNewClient: (req, res) => {
 
-        if(req.body.name.length<1){
+    if(req.body.name.length<1){
             return res.status(400).json({
                 error: 'Debe ingresar un nombre.'
             })
@@ -33,7 +33,7 @@ const clientController = {
             })
         }
 
-       if(req.body.phone.length<6){
+    if(req.body.phone.length<6){
         return res.status(400).json({
             error: 'Debe ingresar un teléfono  válido y mayor o igual a 6 numeros.'
         })

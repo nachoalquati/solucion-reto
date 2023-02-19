@@ -30,7 +30,8 @@ const appRoutes:Routes=[
  { path:'repairs/:id', component: RepairsPhoneComponent },
  { path:'repairs-list', component: RepairsListComponent },
  { path:'register-phone', component: NewPhoneComponent },
- { path:'register-client', component: NewClientComponent }
+ { path:'register-client', component: NewClientComponent },
+ { path:'register-repair', component: NewRepairComponent }
 ]
 
 @NgModule({
