@@ -9,12 +9,12 @@
             <form>
               <div class="form-group">
                 <label for="email" class="font-weight-bold">Correo</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"  placeholder="Enter email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
-                <small id="emailHelp" class="form-text text-muted">No compartiremos tu informacion.</small>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"  placeholder="Ingrese correo" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
+                <small id="emailHelp" class="form-text text-muted">No compartiremos tu información.</small>
               </div>
               <div class="form-group">
-                <label for="password" class="font-weight-bold" >Contrasena</label>
-                <input type="password" class="form-control" id="password" placeholder="Password"   name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                <label for="password" class="font-weight-bold" >Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese contraseña"   name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
                 <div *ngIf="atempt>=1">
                   <hr>
                   <div class="alert alert-danger" role="alert">

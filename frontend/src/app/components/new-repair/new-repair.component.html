@@ -3,17 +3,17 @@
       <div class="col-md-8 col-lg-6">
         <div class="card border-0 shadow-lg">
           <div class="card-header bg-light text-dark text-center py-4">
-            <h3 class="mb-0">Crear nuevo Telefono</h3>
+            <h3 class="mb-0">Crear nueva reparación</h3>
           </div>
           <div class="card-body">
             <form>
             <label for="exampleFormControlTextarea1" class="font-weight-bold" >Cliente</label>
-            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="selectedClientId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione telefono" (change)="loadPhonesByClient()">
+            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="selectedClientId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione teléfono " (change)="loadPhonesByClient()">
                 <option disabled>Seleccione cliente</option>
                 <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
             </select>
-            <label for="exampleFormControlTextarea1" class="font-weight-bold" >Telefono</label>
-            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="phoneId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione telefono">
+            <label for="exampleFormControlTextarea1" class="font-weight-bold" >Teléfono</label>
+            <select class="form-select mb-3" aria-label="Default select example " name="clientId" [(ngModel)]="phoneId" [ngModelOptions]="{standalone: true}" aria-placeholder="Seleccione teléfono ">
                 <option disabled>Seleccione telefono</option>
                 <option *ngFor="let phone of phones" [value]="phone.id">{{ phone.model }}</option>
             </select>
@@ -24,7 +24,7 @@
                 <input type="number" class="form-control" id="text" name="model" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}"  placeholder="Ingresar costo por reparación." >
               </div>
               <div class="form-group mb-3">
-                <label for="exampleFormControlTextarea1" class="font-weight-bold" >Observacion</label>
+                <label for="exampleFormControlTextarea1" class="font-weight-bold" >Observación </label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observation" [(ngModel)]="observation" [ngModelOptions]="{standalone: true}"></textarea>
                 
               </div>

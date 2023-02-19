@@ -1,20 +1,20 @@
 <div class="container">
     <h2>Reparaciones <span class="badge bg-secondary">{{owner}}</span></h2>
-    <div class="row">
-
-            <div class="container-lg my-3">
+    <div class="container-lg my-3">
         <div class="row justify-content-center">
             <button class="btn btn-primary btn-block" routerLink="/register-repair"><b>Ingresar reparación</b></button>
         </div>
       </div>
+    <div class="row"  *ngIf="repairs.length>0">
 
         <app-repair [repair]="repair" *ngFor="let repair of repairs" ></app-repair>
         
     </div>
-
     <div  *ngIf="repairs.length<1">
         <div class="alert alert-danger" role="alert"  >
             No hay reparaciones registradas!
         </div>
     </div>
+
+
 </div>
