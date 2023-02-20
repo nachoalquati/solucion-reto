@@ -1,49 +1,64 @@
 # solucion-reto
+Solución técnica para la empresa Innpactia
+Este es el proyecto desarrollado por Ignacio Alquati para la empresa Innpactia. El proyecto fue creado utilizando Node.js y Express para el backend, Angular 13 para el frontend y MySQL para la base de datos.
 
-Esta es la solución técnica para la empresa Innpactia realizada por Ignacio Alquati.
+Instalación
+Para poder correr el proyecto completo es necesario seguir los siguientes pasos:
 
-Para comenzar el proyecto fue creado con Node.js y Express para el backend , Angular 13 para el frontend y MySQL para la base de datos.
+Descargar el archivo "Reparaciones.SQL" que se encuentra en la raíz del repositorio y utilizarlo para generar la base de datos e insertar algunos datos de prueba.
 
-Para poder correr el proyecto completo primero es importante realizar los siguientes pasos:
-
-
-Hacer uso del archivo Reparaciones.SQL que se encuentra en la raíz del repositorio para generar la base de datos e insertar algunos datos de prueba.
-Asegurarse de tener instalado el entorno de node.js, sino, descargarlo desde https://nodejs.org/es/ 
+Asegurarse de tener instalado Node.js. En caso contrario, se puede descargar desde https://nodejs.org/es/.
 
 Abrir XAMPP o MAMP y activar el servicio en el puerto 3306.
 
-El siguiente paso es abrir una terminal en la raíz de la carpeta “Backend” e insertar el siguiente comando:
+En la carpeta "Backend", abrir una terminal y ejecutar el siguiente comando:
+
+css
+Copy code
 npm i
-Al insertar este comando instalaremos todas las dependencias del proyecto.
+Este comando instalará todas las dependencias del proyecto.
 
-Ahora haremos el mismo procedimiento con la carpeta “Frontend”, accederemos a la raíz y ejecutaremos el comando desde una terminal:
+Repetir el mismo procedimiento en la carpeta "Frontend". Abrir una terminal en la carpeta y ejecutar el comando:
+css
+Copy code
 npm i
+Este comando instalará todas las dependencias del proyecto.
 
-
-Una vez que se hayan instalado las dependencias de ambos proyectos vamos a volver a la terminal que está abierta en la raíz de la carpeta backend y ejecutaremos el comando:
+Una vez instaladas las dependencias en ambos proyectos, abrir una terminal en la raíz de la carpeta "Backend" y ejecutar el comando:
+sql
+Copy code
 npm start
-Si todo salio bien ahora deberíamos ver en la terminal algo parecido a lo siguiente:
+Si todo sale bien, se verá en la terminal algo similar a lo siguiente:
+
+shell
+Copy code
 > backend@0.0.0 start
 > node ./bin/www
-Ahora realizaremos el mismo procedimiento con la terminal abierta en la raíz de la carpeta frontend, si todo sale bien deberíamos ver lo siguiente:
+Repetir el mismo procedimiento en la carpeta "Frontend". Abrir una terminal en la carpeta y ejecutar el comando:
+sql
+Copy code
+npm start
+Si todo sale bien, se verá en la terminal lo siguiente:
+
+Copy code
 √ Compiled successfully.
+Abrir un navegador e ingresar la siguiente dirección en la barra de navegación: http://localhost:4200/login
 
+Si todo ha salido bien, el sitio debería estar corriendo. Las credenciales de ingreso son:
 
-Ahora debemos abrir un navegador e ingresar lo siguiente en la barra de navegación: http://localhost:4200/login
-
-
-Si todo ha salido bien ya debería estar corriendo el sitio, las credenciales de ingreso son: 
-	email: user@user.com
-	password: 123456
-
-También puede crearse un usuario con una request de tipo POST con los headers de “content/type”:application/json y un cuerpo con los siguiente:
+makefile
+Copy code
+email: user@user.com
+password: 123456
+También se puede crear un usuario con una solicitud de tipo POST con los headers "content/type": application/json y el siguiente cuerpo:
+perl
+Copy code
 {
    "email": "cliente40@example.com",
    "name" : "Lionel Messi",
   "password" : "aquimipassword"
 }
-Atención, todas las contraseñas están hasheadas, por lo que no hay que intentar modificarlas desde la base de datos directamente.
-Listo!
+Todas las contraseñas están encriptadas, por lo que no se deben modificar directamente desde la base de datos.
 
-
-Desarrollado por Ignacio Alquati.
+Desarrollado por
+Ignacio Alquati.
