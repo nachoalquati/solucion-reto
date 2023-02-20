@@ -14,41 +14,49 @@ Para poder correr el proyecto completo es necesario seguir los siguientes pasos:
 3. Abrir XAMPP o MAMP y activar el servicio en el puerto 3306.
 
 4. En la carpeta "Backend", abrir una terminal y ejecutar el siguiente comando:
+ ```
 npm i
-
+ ```
 
 Este comando instalará todas las dependencias del proyecto.
 
 5. Repetir el mismo procedimiento en la carpeta "Frontend". Abrir una terminal en la carpeta y ejecutar el comando:
+ ```
 npm i
-
+ ```
 
 Este comando instalará todas las dependencias del proyecto.
 
 6. Una vez instaladas las dependencias en ambos proyectos, abrir una terminal en la raíz de la carpeta "Backend" y ejecutar el comando:
+ ```
 npm start
-
+ ```
 
 Si todo sale bien, se verá en la terminal algo similar a lo siguiente:
 
+ ```
 backend@0.0.0 start
 node ./bin/www
-
+ ```
 
 7. Repetir el mismo procedimiento en la carpeta "Frontend". Abrir una terminal en la carpeta y ejecutar el comando:
+ ```
 npm start
-
+ ```
 
 Si todo sale bien, se verá en la terminal lo siguiente:
+ ```
 √ Compiled successfully.
-
+ ```
 
 
 8. Abrir un navegador e ingresar la siguiente dirección en la barra de navegación: http://localhost:4200/login
 
 9. Si todo ha salido bien, el sitio debería estar corriendo. Las credenciales de ingreso son:
+ ```
 email: user@user.com
 password: 123456
+ ```
 
 
 10. También se puede crear un usuario con una solicitud de tipo POST con los headers "content/type": application/json y el siguiente cuerpo:
