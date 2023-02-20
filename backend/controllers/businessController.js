@@ -46,7 +46,7 @@ const businessController = {
     repairsList: (req, res) => {
 // Bring all the repairs that are registred in the DB.
         sequelize.query(`
-        select clients.name ,  phones.model ,amount, repairs.observation , DATE_FORMAT(date, '%d/%m/%Y %H:%i:%s') as date from repairs
+        select clients.name ,  phones.model ,amount, repairs.observation , date from repairs
         inner join phones on phoneId = phones.id
         inner join clients on clients.id = clientId
         order by date desc
